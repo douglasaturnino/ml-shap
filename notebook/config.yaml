@@ -1,3 +1,17 @@
+split:
+  seed: 42
+  teste_size: 0.2
+
 data:
   raw_path: ../data/raw/raw_data.csv
   trusted_path: ../data/trusted/trusted_data.csv
+  train_path: ../data/train_data/train_data.csv
+  test_path: ../data/test_data/test_data.csv
+
+
+imagem:
+  path: ../imagens/aula11.png
+
+model:
+  ml_path: ../model/model.pkl
+  shap_path: ../model/explainer_xgb.pkl
