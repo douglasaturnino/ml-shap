@@ -1,0 +1,8 @@
+pandas==2.2.1
+pyyaml==6.0.1
+xgboost==2.0.3
+shap==0.44.1
+fastapi==0.110.1
+feature-engine==1.7.0 
+scikit-learn==1.4.2
+uvicorn==0.29.0
