@@ -1,0 +1,16 @@
+url_request:
+  path_predict_docker_compose: http://fastapi:8001/predict
+  path_predict_file_docker_compose: http://fastapi:8001/predict_file
+
+  path_predict_localhost: http://localhost:8001/predict
+  path_predict_file_localhost: http://localhost:8001/predict_file
+
+
+model_columns:
+  x_columns:
+  - dependentes
+  - estado_civil
+  - idade
+  - cheque_sem_fundo
+  - valor_emprestimo
+  target: pago
