@@ -1,0 +1,21 @@
+services:
+  fastapi:
+    build: "./api"
+    container_name: fastapi
+    image: ml-shap-api:latest
+    restart: always
+    ports:
+      - "8001:8001"
+
+  streamlit:
+    build: "./app"
+    container_name: streamlit
+    image: ml-shap-app:latest
+    restart: always
+    ports:
+      - "8501:8501"
+    environment:
+      URL_PREDICT: http://fastapi:8001/predict
+      URL_PREDICT_FILE: http://fastapi:8001/predict_file
+    depends_on:
+      - fastapi
