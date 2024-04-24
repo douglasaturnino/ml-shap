@@ -1,7 +1,7 @@
 model:
-  ml_path: model/model.pkl
+  ml_path: /model/model.pkl
   threshold: 0.75
-  shap_path: model/explainer_xgb.pkl
+  shap_path: /model/explainer_xgb.pkl
 
 model_columns:
   x_columns:
