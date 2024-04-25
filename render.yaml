@@ -1,0 +1,10 @@
+services:
+- type: web
+  name: ml-shap
+  runtime: docker
+  repo: https://github.com/douglasaturnino/ml-shap
+  plan: free
+  region: oregon
+  dockerContext: ./api
+  dockerfilePath: Dockerfile
+version: "1"
