@@ -5,6 +5,6 @@ services:
   repo: https://github.com/douglasaturnino/ml-shap/tree/main/api
   plan: free
   region: oregon
-  dockerContext: .
-  dockerfilePath: Dockerfile
+  dockerContext: ./api
+  dockerfilePath: ./api/Dockerfile
 version: "1"
