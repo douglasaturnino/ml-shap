@@ -13,7 +13,8 @@ def import_config(path_yaml):
         config = yaml.safe_load(config_file)
     return config
 
-config = import_config('config.yaml')
+path = os.path.dirname(os.path.abspath(__file__))
+config = import_config(path + '/config.yaml')
 
 URL_PREDICT =  os.getenv('URL_PREDICT', config['url_request']['path_predict_localhost'])
 URL_PREDICT_FILE = os.getenv('URL_PREDICT_FILE', config['url_request']['path_predict_file_localhost'])
