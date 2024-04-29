@@ -1,0 +1,1032 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="dictionary/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.19">
+    
+    
+      
+        <title>Ml com shap</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.66ac8b77.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-problema-de-negocios" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Ml com shap" class="md-header__button md-logo" aria-label="Ml com shap" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ml com shap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introdução
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/douglasaturnino/ml-shap" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    douglasaturnino/ml-shap
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Ml com shap" class="md-nav__button md-logo" aria-label="Ml com shap" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Ml com shap
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/douglasaturnino/ml-shap" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    douglasaturnino/ml-shap
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Introdução
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Introdução
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-problema-de-negocios" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 Problema de negócios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 Problema de negócios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Problema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-motivacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Motivação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-demandas-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Demandas de negócio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-premissas-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 Premissas de negócio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-planejamento-da-solucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Planejamento da solução
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Planejamento da solução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-produto-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Produto final
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-ferramentas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Ferramentas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-metodo-sape" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Metodo SAPE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Metodo SAPE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-os-3-principais-insights-dos-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Os 3 principais insights dos dados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Os 3 principais insights dos dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clientes-com-dependentes-sao-em-media-15-mais-adimplentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Clientes com Dependentes são em média 15% mais ADIMPLENTES.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-clientes-que-pegaram-emprestimos-de-mais-de-rs20000-tem-tendencia-a-ser-inadimplentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Clientes que pegaram empréstimos de mais de RS$20000 tem tendência a ser INADIMPLENTES.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clientes-que-sao-solteiros-tem-uma-taxa-percentual-maior-de-inadimplencia-que-os-demais" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clientes que são solteiros tem uma taxa percentual maior de INADIMPLÊNCIA que os demais.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-resultados-para-o-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Resultados para o negócio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Conclusão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-proximos-passos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Próximos passos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dictionary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dicionario de dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-problema-de-negocios" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 Problema de negócios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 Problema de negócios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Problema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-motivacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Motivação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-demandas-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Demandas de negócio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-premissas-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 Premissas de negócio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-planejamento-da-solucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Planejamento da solução
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Planejamento da solução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-produto-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Produto final
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-ferramentas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Ferramentas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-metodo-sape" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Metodo SAPE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Metodo SAPE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-os-3-principais-insights-dos-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Os 3 principais insights dos dados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Os 3 principais insights dos dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clientes-com-dependentes-sao-em-media-15-mais-adimplentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Clientes com Dependentes são em média 15% mais ADIMPLENTES.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-clientes-que-pegaram-emprestimos-de-mais-de-rs20000-tem-tendencia-a-ser-inadimplentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Clientes que pegaram empréstimos de mais de RS$20000 tem tendência a ser INADIMPLENTES.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-clientes-que-sao-solteiros-tem-uma-taxa-percentual-maior-de-inadimplencia-que-os-demais" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clientes que são solteiros tem uma taxa percentual maior de INADIMPLÊNCIA que os demais.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-resultados-para-o-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Resultados para o negócio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Conclusão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-proximos-passos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Próximos passos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Introdução</h1>
+
+<p>Este é um projeto fictício. A empresa, o contexto e as perguntas de negócios não são reais. Este portfólio está seguindo as recomendações da Comunidade DS.
+Ao enviar uma mensagem para a API, a resposta pode haver uma lentidão para aparecer, pois, o Render depois de um tempo sem uso desliga a aplicação.</p>
+<p>O Banco UniiFance, uma instituição financeira líder e confiável, destaca-se no
+mercado pela sua dedicação em fornecer soluções de crédito acessíveis e sob
+medida para empresários do setor comercial. Com foco em empréstimos
+flexíveis e acessíveis, nossa equipe altamente qualificada trabalha em estreita
+colaboração com os clientes para atender às suas necessidades financeiras
+específicas.</p>
+<p>Atualmente o banco está passando por uma revisão em como ele empresta o
+dinheiro para os seus clientes, assim o objetivo é criar processos inteligentes
+para a previsão de que alguém pode vim a passar por dificuldades financeiras
+nos próximos dois anos.</p>
+<h2 id="1-problema-de-negocios">1 Problema de negócios</h2>
+<h3 id="11-problema">1.1 Problema</h3>
+<p>Um Banco Brasileiro contratou você como consultor em ciência de dados. O diretor da área de empréstimos para pessoa física, percebeu a diminuição do ROI(Return Over Investment Retorno sobre Investimento) devido a alta taxa de inadimplência.</p>
+<h3 id="12-motivacao">1.2 Motivação</h3>
+<p>O diretor da área de empréstimos para pessoa física está com uma alta taxa percentual de inadimplência, afetando diretamente o ROI da empresa.</p>
+<h3 id="13-demandas-de-negocio">1.3 Demandas de negócio</h3>
+<ul>
+<li>Qual perfil de um cliente adimplente?</li>
+<li>Qual variável que mais impacta para o cliente ser inadimplente?</li>
+<li>Qual a contribuição individual de cada variável para cada cliente ser inadimplente?</li>
+</ul>
+<h2 id="2-premissas-de-negocio">2 Premissas de negócio</h2>
+<ul>
+<li>Todos os produtos de dados entregues devem ser acessíveis via internet.</li>
+<li>O planejamento da solução será validado com os times de negócio, visando garantir que as soluções desenvolvidas sejam úteis na sua tomada de decisão.</li>
+<li>Após responder as perguntas, o Diretor gostaria de construir uma aplicação que retorne a probabilidade do cliente ser inadimplente para que os analistas de empréstimo possam simular alguns cenários de empréstimos e tomar melhores decisões.</li>
+</ul>
+<p>As variaveis do dataset original são:</p>
+<table>
+<thead>
+<tr>
+<th>Variavel</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Um Id que representa uma linha dentro do conjunto de dados</td>
+</tr>
+<tr>
+<td>escolaridade</td>
+<td>Nivel de escolaridade do cliente</td>
+</tr>
+<tr>
+<td>renda_mensal</td>
+<td>Renda bruta mensal do cliente</td>
+</tr>
+<tr>
+<td>dependentes</td>
+<td>Informa se o cliente possui dependentes</td>
+</tr>
+<tr>
+<td>estado_civil</td>
+<td>O estado civil do cliente</td>
+</tr>
+<tr>
+<td>idade</td>
+<td>A idade do cliente na data do pedido de emprestimo</td>
+</tr>
+<tr>
+<td>conta_poupanca</td>
+<td>Informa se a conta é poupança</td>
+</tr>
+<tr>
+<td>conta_salario</td>
+<td>Informa se a conta é salario</td>
+</tr>
+<tr>
+<td>qtd_fonte_renda</td>
+<td>A quantidade de fonte de renda do cliente</td>
+</tr>
+<tr>
+<td>cheque_sem_fundo</td>
+<td>Informa se o cliente já passou cheque sem fundo</td>
+</tr>
+<tr>
+<td>conta_conjunta</td>
+<td>Informa se é uma conta conjunta</td>
+</tr>
+<tr>
+<td>valor_conta_corrente</td>
+<td>A quantidade de dinheiro na conta corrente do cliente</td>
+</tr>
+<tr>
+<td>valor_conta_poupanca</td>
+<td>A quantidade de dineiro na conta poupança do cliente</td>
+</tr>
+<tr>
+<td>valor_emprestimo</td>
+<td>A quantia que o cliente pediu o emprestimo</td>
+</tr>
+<tr>
+<td>multa</td>
+<td>A multa aplica no emprestimo</td>
+</tr>
+<tr>
+<td>juros</td>
+<td>O juros aplicado no emprestimo</td>
+</tr>
+<tr>
+<td>valor_emprestimo_atualizado</td>
+<td>A soma do valor do emprestimo + multa + juros</td>
+</tr>
+<tr>
+<td>pago</td>
+<td>Informa se o cliente pagou o emprestimo</td>
+</tr>
+<tr>
+<td>genero</td>
+<td>Informa o genero do cliente</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Data que o dataset foi fornecido</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>Estado do cliente</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-planejamento-da-solucao">3 Planejamento da solução</h2>
+<h3 id="31-produto-final">3.1 Produto final</h3>
+<p>O que será entregue efetivamente?
+- A uma API que recebe os dados do cliente e retorna a probabilidade de Inadimplencia.
+- Um painel para verificar se o cliente vai ser adimplente.</p>
+<h3 id="32-ferramentas">3.2 Ferramentas</h3>
+<p>Quais ferramentas serão usadas no processo?
+- Python;
+- Visual Studio code;
+- Jupyter Notebook;
+- Git, Github;
+- Streamlit;
+- Docker, Docker compose;
+- Cloud Render.</p>
+<h3 id="33-metodo-sape">3.3 Metodo SAPE</h3>
+<h4 id="saida">Saida</h4>
+<ul>
+<li>Aplicativo que recebe os dados de clientes novos e retorna a probabilidade
+de Inadimplência junto com o impacto individual de cada variável para
+tomada de decisão.</li>
+<li>Relatório com todas as resposta das perguntas feitas pelo Diretor da área de
+empréstimos.</li>
+</ul>
+<h4 id="processo">Processo</h4>
+<ul>
+<li>
+<p>Baixar os dados e ler os dados</p>
+</li>
+<li>
+<p>Executar o processo de limpeza de dados como:</p>
+</li>
+<li>renomear colunas</li>
+<li>checagem de valores NA</li>
+<li>imputação de valores NA</li>
+<li>renomear categorias</li>
+<li>
+<p>mudar de tipo de variável, caso necessário</p>
+</li>
+<li>
+<p>Estatística descritiva com visualização</p>
+</li>
+<li>
+<p>Criação de hipóteses e validação das mesmas</p>
+</li>
+<li>
+<p>Análise exploratória</p>
+</li>
+<li>Univariada</li>
+<li>
+<p>Bivariada</p>
+</li>
+<li>
+<p>Preparação dos dados para treinamento de modelos de Machine Learning (feature engineering)</p>
+</li>
+<li>
+<p>Seleção das variáveis mais importantes</p>
+</li>
+<li>Treinamento de algoritmos de ML</li>
+<li>Tunagem de hyperparâmetros e cross validation</li>
+<li>Interpretação dos modelos utilizando SHAP</li>
+<li>Comparação da performance dos modelos</li>
+<li>Escolha do modelo final</li>
+<li>Uso do modelo final para fazer predições de novos dados em um aplicativo na web</li>
+</ul>
+<h4 id="entrada">Entrada</h4>
+<ul>
+<li>Tabela de dados de clientes em .csv fornecidad pela empresa.</li>
+</ul>
+<h2 id="4-os-3-principais-insights-dos-dados">4. Os 3 principais insights dos dados</h2>
+<h4 id="1-clientes-com-dependentes-sao-em-media-15-mais-adimplentes">1. Clientes com Dependentes são em média 15% mais ADIMPLENTES.</h4>
+<ul>
+<li><strong>Verdadeiro</strong> Clientes com dependentes são em média 18% mais ADIMPLENTES.</li>
+</ul>
+<p><img alt="alt text" src="https://github.com/douglasaturnino/ml-shap/assets/95532957/2aae8624-7ef8-4843-be22-110c333afc69" /></p>
+<h4 id="2-clientes-que-pegaram-emprestimos-de-mais-de-rs20000-tem-tendencia-a-ser-inadimplentes">2. Clientes que pegaram empréstimos de mais de RS$20000 tem tendência a ser INADIMPLENTES.</h4>
+<ul>
+<li><strong>Verdadeiro</strong> Clientes que pegaram empréstimos de mais de RS$20000 tem tendência a ser INADIMPLENTES.</li>
+</ul>
+<p><img alt="alt text" src="https://github.com/douglasaturnino/ml-shap/assets/95532957/e084ec1f-e96b-46d7-a170-788c629e41d8" /></p>
+<h3 id="3-clientes-que-sao-solteiros-tem-uma-taxa-percentual-maior-de-inadimplencia-que-os-demais">3. Clientes que são solteiros tem uma taxa percentual maior de INADIMPLÊNCIA que os demais.</h3>
+<ul>
+<li><strong>FALSO</strong> Clientes que são solteiros tem um taxa de 89% de ser ADIMPLENTES.</li>
+</ul>
+<p><img alt="alt text" src="https://github.com/douglasaturnino/ml-shap/assets/95532957/77cefe78-0edd-4a9b-adcd-0e38e47c4837" /></p>
+<h2 id="5-resultados-para-o-negocio">5. Resultados para o negócio</h2>
+<p>De acordo com os critérios definidos, foi feita uma previsão de adimplencia. Como resultado para o negócio foram criados:</p>
+<ul>
+<li>
+<p>Uma API onde será feita a previsão.</p>
+</li>
+<li>
+<p>Um dashboard feito no streamlit para preve a adimplencia do cliente.</p>
+</li>
+<li>
+<p>Uma documentação para o entendimento do projeto.</p>
+</li>
+</ul>
+<h2 id="6-conclusao">6. Conclusão</h2>
+<p>O objetivo foi alcançado, dado que o produto de dados foram gerados com sucesso. O funcionario pode utilizar a ferramenta criado para fazer a previsão para a tomada de dicisão de emprestimo.</p>
+<p>O dashboard pode ser acessado por <a href="https://ml-shap.streamlit.app/">aqui</a></p>
+<ul>
+<li>Foi construida uma documentação com o problema a ser resolvido e detalhes das classes <a href="https://douglasaturnino.github.io/ml-shap/">aqui</a>.</li>
+</ul>
+<h2 id="7-proximos-passos">7. Próximos passos</h2>
+<ul>
+<li>Aprimorar a apresentação do painel, pois sua disposição atual pode não ser intuitiva.</li>
+<li>Exibir os resultados acima do painel, em vez de destacá-los dentro do menu em verde.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.dd8806f2.min.js"></script>
+      
+    
+  </body>
+</html>
