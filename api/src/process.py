@@ -155,7 +155,7 @@ class DataProcess:
         else:
             return data_df["predict"].tolist()
 
-    def process_data(self, data):
+    def process_data(self, data: pd.DataFrame) -> Union[Dict[str, Any], List[Any]]:
         """
         Processa os dados de entrada para gerar previsões e explicações do modelo SHAP.
 
