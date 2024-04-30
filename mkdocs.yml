@@ -1,0 +1,27 @@
+site_name: Ml com shap
+repo_url: https://github.com/douglasaturnino/ml-shap
+repo_name: douglasaturnino/ml-shap
+
+theme:
+  name: material
+  features:
+    - navigation.top
+
+nav:
+  - Introdução: index.md
+  - Dicionario de dados: dictionary.md
+  - API: process.md
+  # - evaluation.md
+  # - utils.md
+  # - predict.md
+  # - monitoring.md
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings
+
