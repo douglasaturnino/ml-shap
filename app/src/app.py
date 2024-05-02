@@ -45,7 +45,9 @@ def input_cliente() -> dict:
     cheque_sem_fundo = st.sidebar.selectbox(
         "Já passou cheque sem fundo?", ["S", "N"]
     )
-    valor_emprestimo = st.sidebar.number_input("Valor do Empréstimo")
+    valor_emprestimo = st.sidebar.number_input(
+        "Valor do Empréstimo", min_value=0.00
+    )
     return {
         "dependentes": dependentes,
         "estado_civil": estado_civil,
