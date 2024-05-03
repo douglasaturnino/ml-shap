@@ -110,7 +110,7 @@ def input_csv() -> pd.DataFrame:
     Função para receber e processar um arquivo CSV de entrada.
 
     Returns:
-    - DataFrame: Um DataFrame contendo os dados do arquivo CSV.
+        DataFrame: Um DataFrame contendo os dados do arquivo CSV.
     """
     uploaded_file = st.sidebar.file_uploader(
         "Upload de CSV com informações clientes", key="2"
