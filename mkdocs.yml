@@ -1,4 +1,4 @@
-site_name: Ml com shap
+site_name: Interpretabilidade ML com SHAP
 repo_url: https://github.com/douglasaturnino/ml-shap
 repo_name: douglasaturnino/ml-shap
 
@@ -10,11 +10,9 @@ theme:
 nav:
   - Introdução: index.md
   - Dicionario de dados: dictionary.md
+  - Modo de uso: utilizacao.md
   - API: process.md
-  # - evaluation.md
-  # - utils.md
-  # - predict.md
-  # - monitoring.md
+  - APP: app.md
 
 markdown_extensions:
   - pymdownx.highlight
