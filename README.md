@@ -1,3 +1,7 @@
+<div align='center'>
+<img src="https://gist.github.com/assets/95532957/8a4cae79-0249-480b-93e2-adf33fbeffb9"  width=700px/>
+</div>
+
 Este é um projeto fictício. A empresa, o contexto e as perguntas de negócios não são reais. Este portfólio está seguindo as recomendações da Comunidade DS.
 Ao enviar uma mensagem para a API, a resposta pode haver uma lentidão para aparecer, pois, o Render depois de um tempo sem uso desliga a aplicação.
 
@@ -61,11 +65,13 @@ As variaveis do dataset original são:
 ## 3 Planejamento da solução
 ### 3.1 Produto final
 O que será entregue efetivamente?
+
 - A uma API que recebe os dados do cliente e retorna a probabilidade de Inadimplencia.
 - Um painel para verificar se o cliente vai ser adimplente.
 
 ### 3.2 Ferramentas
 Quais ferramentas serão usadas no processo?
+
 - Python;
 - Visual Studio code;
 - Jupyter Notebook;
