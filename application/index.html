@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="..">
-      
-      
-        <link rel="next" href="../utilizacao/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Dicionario de dados - Interpretabilidade ML com SHAP</title>
+        <title>Application - Interpretabilidade ML com SHAP</title>
       
     
     
@@ -95,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dicionario de dados
+              Application
             
           </span>
         </div>
@@ -229,17 +225,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../dictionary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -248,7 +237,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -347,179 +335,9 @@
   
 
 
-  <h1>Dicionario de dados</h1>
+  <h1>Application</h1>
 
-<p>Aqui está o dicionário de dados para os valores brutos do dataset:</p>
-<ol>
-<li>
-<p><strong>id</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Um ID que representa uma linha dentro do conjunto de dados.</li>
-<li><strong>Tipo de Dados</strong>: Integer.</li>
-<li><strong>Valores Permitidos</strong>: [309652396, 498764591, 504868288, ...].</li>
-</ul>
-</li>
-<li>
-<p><strong>escolaridade</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Nível de escolaridade do cliente.</li>
-<li><strong>Tipo de Dados</strong>: String.</li>
-<li><strong>Valores Permitidos</strong>: [nan, 'nivel medio', 'pos graducao', 'ensino superior'].</li>
-</ul>
-</li>
-<li>
-<p><strong>renda_mensal_informal</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Renda bruta mensal do cliente.</li>
-<li><strong>Tipo de Dados</strong>: Float.</li>
-<li><strong>Valores Permitidos</strong>: [nan, 1894.5078, 130.4699, ...].</li>
-</ul>
-</li>
-<li>
-<p><strong>dependentes</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Informa se o cliente possui dependentes.</li>
-<li><strong>Tipo de Dados</strong>: String.</li>
-<li><strong>Valores Permitidos</strong>: ['S', 'N'].</li>
-</ul>
-</li>
-<li>
-<p><strong>estado_civil</strong></p>
-<ul>
-<li><strong>Descrição</strong>: O estado civil do cliente.</li>
-<li><strong>Tipo de Dados</strong>: String.</li>
-<li><strong>Valores Permitidos</strong>: ['solteiro', 'casado(a) com comunhao de bens', 'casado(a) com comunhao parcial de bens', 'casado(a) com separacao de bens', 'divorciado', 'separado judicialmente', 'viuvo(a)', 'outros'].</li>
-</ul>
-</li>
-<li>
-<p><strong>idade</strong></p>
-<ul>
-<li><strong>Descrição</strong>: A idade do cliente na data do pedido de empréstimo.</li>
-<li><strong>Tipo de Dados</strong>: Integer.</li>
-<li><strong>Valores Permitidos</strong>: [36, 39, 26, 23, ...].</li>
-</ul>
-</li>
-<li>
-<p><strong>conta_poupanca</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Informa se a conta é poupança.</li>
-<li><strong>Tipo de Dados</strong>: String.</li>
-<li><strong>Valores Permitidos</strong>: ['S', 'N'].</li>
-</ul>
-</li>
-<li>
-<p><strong>conta_salario</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Informa se a conta é salário.</li>
-<li><strong>Tipo de Dados</strong>: String.</li>
-<li><strong>Valores Permitidos</strong>: ['S', 'N'].</li>
-</ul>
-</li>
-<li>
-<p><strong>qtd_fonte_renda</strong></p>
-<ul>
-<li><strong>Descrição</strong>: A quantidade de fontes de renda do cliente.</li>
-<li><strong>Tipo de Dados</strong>: Float.</li>
-<li><strong>Valores Permitidos</strong>: [nan, 1., 2., 3.].</li>
-</ul>
-</li>
-<li>
-<p><strong>cheque_sem_fundo</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Informa se houve cheque sem fundo.</li>
-<li><strong>Tipo de Dados</strong>: String.</li>
-<li><strong>Valores Permitidos</strong>: ['S', 'N'].</li>
-</ul>
-</li>
-<li>
-<p><strong>conta_conjunta</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Informa se a conta é conjunta.</li>
-<li><strong>Tipo de Dados</strong>: String.</li>
-<li><strong>Valores Permitidos</strong>: ['S', 'N'].</li>
-</ul>
-</li>
-<li>
-<p><strong>valor_conta_corrente</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Valor na conta corrente do cliente.</li>
-<li><strong>Tipo de Dados</strong>: Float.</li>
-<li><strong>Valores Permitidos</strong>: [nan].</li>
-</ul>
-</li>
-<li>
-<p><strong>valor_conta_poupanca</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Valor na conta poupança do cliente.</li>
-<li><strong>Tipo de Dados</strong>: Float.</li>
-<li><strong>Valores Permitidos</strong>: [nan].</li>
-</ul>
-</li>
-<li>
-<p><strong>valor_emprestimo</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Valor do empréstimo solicitado pelo cliente.</li>
-<li><strong>Tipo de Dados</strong>: Float.</li>
-<li><strong>Valores Permitidos</strong>: [8174.32, 41775.63, 522940.27, ...].</li>
-</ul>
-</li>
-<li>
-<p><strong>multa</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Valor da multa associada ao empréstimo.</li>
-<li><strong>Tipo de Dados</strong>: Float.</li>
-<li><strong>Valores Permitidos</strong>: [263.25, 1607.29, 24860.4, ...].</li>
-</ul>
-</li>
-<li>
-<p><strong>juros</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Valor dos juros associados ao empréstimo.</li>
-<li><strong>Tipo de Dados</strong>: Float.</li>
-<li><strong>Valores Permitidos</strong>: [5.8449800e+03, 7.6522600e+03, 3.1931562e+05, ...].</li>
-</ul>
-</li>
-<li>
-<p><strong>valor_emprestimo_atualizado</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Valor atualizado do empréstimo (principal + juros + multa).</li>
-<li><strong>Tipo de Dados</strong>: Float.</li>
-<li><strong>Valores Permitidos</strong>: [14282.55, 51035.18, 867116.29, ...].</li>
-</ul>
-</li>
-<li>
-<p><strong>genero</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Gênero do cliente.</li>
-<li><strong>Tipo de Dados</strong>: String.</li>
-<li><strong>Valores Permitidos</strong>: ['feminino', 'masculino'].</li>
-</ul>
-</li>
-<li>
-<p><strong>data</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Data do registro.</li>
-<li><strong>Tipo de Dados</strong>: String (formato de data).</li>
-<li><strong>Valores Permitidos</strong>: ['2020-01-01'].</li>
-</ul>
-</li>
-<li>
-<p><strong>estado</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Estado onde o cliente está localizado.</li>
-<li><strong>Tipo de Dados</strong>: String.</li>
-<li><strong>Valores Permitidos</strong>: ['minas gerais', 'espirito santo', 'sao paulo', 'rio de janeiro'].</li>
-</ul>
-</li>
-<li>
-<p><strong>pago</strong></p>
-<ul>
-<li><strong>Descrição</strong>: Indica se o empréstimo foi pago ou não.</li>
-<li><strong>Tipo de Dados</strong>: String.</li>
-<li><strong>Valores Permitidos</strong>: ['sim', 'nao'].</li>
-</ul>
-</li>
-</ol>
+
 
 
 
