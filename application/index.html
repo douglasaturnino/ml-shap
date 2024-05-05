@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../utilizacao/">
+      
+      
+        <link rel="next" href="../process/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Application - Interpretabilidade ML com SHAP</title>
+        <title>Modo de executar a aplicação - Interpretabilidade ML com SHAP</title>
       
     
     
@@ -59,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#executando-a-aplicacao" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -91,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Application
+              Modo de executar a aplicação
             
           </span>
         </div>
@@ -265,6 +274,95 @@
       
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Modo de executar a aplicação
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Modo de executar a aplicação
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#executando-a-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executando a aplicação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Executando a aplicação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utilizando-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilizando Docker Compose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executando-o-arquivo-py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executando o arquivo .py
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     <li class="md-nav__item">
@@ -319,6 +417,47 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#executando-a-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executando a aplicação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Executando a aplicação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utilizando-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilizando Docker Compose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executando-o-arquivo-py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executando o arquivo .py
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -335,9 +474,21 @@
   
 
 
-  <h1>Application</h1>
+  <h1>Modo de executar a aplicação</h1>
 
-
+<h2 id="executando-a-aplicacao">Executando a aplicação</h2>
+<p>Há duas maneiras de executar a aplicação: usando Docker Compose ou executando diretamente os arquivos __main__.py entro das pastas api e app.</p>
+<h3 id="utilizando-docker-compose">Utilizando Docker Compose</h3>
+<p>Antes de tudo, certifique-se de ter o Docker instalado em sua máquina. Você pode instalá-lo seguindo a documentação oficial do <a href="https://docs.docker.com/desktop/">Docker Desktop</a>.</p>
+<p>Com o Docker instalado, basta executar o comando <code>docker compose up</code> no terminal, dentro da pasta raiz do projeto. Isso construirá a API e a aplicação no Streamlit. Em seguida, em um navegador de sua preferência, acesse <code>http://localhost:8501</code> para abrir a aplicação no Streamlit. </p>
+<p>Para encerrar a aplicação, pressione <code>Ctrl + C</code> no terminal ou feche-o.</p>
+<p>Para saber como utilizar, consulte a seção <a href="../utilizacao/">Modo de uso</a>.</p>
+<h3 id="executando-o-arquivo-py">Executando o arquivo .py</h3>
+<p>Para executar a aplicação, crie um ambiente virtual usando sua ferramenta preferida. A ferramenta utilizada neste caso foi o Poetry, com a versão do Python sendo 3.10.14.</p>
+<p>Após a instalação do Poetry, na raiz do projeto, execute o comando <code>poetry install</code> para instalar todas as dependências do projeto.</p>
+<p>Em um terminal, execute o comando <code>python api/__main_.py</code> ou <code>python api</code>. Isso iniciará o FastAPI. Mantenha este terminal aberto e, em um novo terminal, execute o comando <code>streamlit run app/__main__.py</code>. Se a página não abrir automaticamente no seu navegador, acesse <code>http://localhost:8501</code>. </p>
+<p>Para encerrar a aplicação, pressione <code>Ctrl + C</code> no terminal ou feche-o. </p>
+<p>Para saber como utilizar, consulte a seção <a href="../utilizacao/">Modo de uso</a>.</p>
 
 
 
