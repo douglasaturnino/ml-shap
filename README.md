@@ -1,5 +1,5 @@
 <div align='center'>
-<img src="https://gist.github.com/assets/95532957/8a4cae79-0249-480b-93e2-adf33fbeffb9"  width=700px/>
+<img src="https://github.com/douglasaturnino/ml-shap/assets/95532957/6e0a8482-fde0-43b4-b144-4947ae360591"  width=700px/>
 </div>
 
 Este é um projeto fictício. A empresa, o contexto e as perguntas de negócios não são reais. Este portfólio está seguindo as recomendações da Comunidade DS.
