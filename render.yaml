@@ -7,4 +7,15 @@ services:
   region: oregon
   dockerContext: ./api
   dockerfilePath: ./api/Dockerfile
+
+databases:
+- name: dsopostgres
+  databaseName: dbname_8k9g
+  user: dbuser
+  plan: free
+  region: oregon
+  ipAllowList:
+  - source: 0.0.0.0/0
+    description: everywhere
+  postgresMajorVersion: "16"
 version: "1"
